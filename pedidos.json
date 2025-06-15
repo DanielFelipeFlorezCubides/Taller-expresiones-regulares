@@ -1,0 +1,166 @@
+[
+  {
+    "_id": { "$oid": "64a1b2c3d4e5f6789abcdef3" },
+    "numero_pedido": "ORD-2023-001",
+    "usuario_id": { "$oid": "64a1b2c3d4e5f6789abcdef0" },
+    "usuario_info": {
+      "nombre": "Juan Pérez",
+      "email": "juan@ejemplo.com",
+      "telefono": "+123456789"
+    },
+    "estado": "entregado",
+    "productos": [
+      {
+        "producto_id": { "$oid": "64a1b2c3d4e5f6789abcdef1" },
+        "nombre": "Vitamina C Natural",
+        "sku": "VIT-C-001",
+        "precio_unitario": 12.99,
+        "cantidad": 2,
+        "subtotal": 25.98,
+        "imagen": "https://ejemplo.com/vitamina-c-thumb.jpg"
+      }
+    ],
+    "direccion_envio": {
+      "calle": "Calle Principal 123",
+      "ciudad": "Ciudad Ejemplo",
+      "estado": "Estado Ejemplo",
+      "codigo_postal": "12345",
+      "pais": "México"
+    },
+    "pago": {
+      "metodo": "tarjeta",
+      "estado": "completado",
+      "referencia": "PAY-123456",
+      "ultimos_digitos": "1234",
+      "proveedor": "Visa"
+    },
+    "envio": {
+      "metodo": "Estándar",
+      "costo": 5.0,
+      "seguimiento": {
+        "codigo": "TRACK123456",
+        "servicio": "DHL",
+        "url": "https://dhl.com/tracking/TRACK123456"
+      },
+      "fecha_estimada": { "$date": "2023-06-25T00:00:00Z" }
+    },
+    "promocion": {
+      "codigo": "BIENVENIDO10",
+      "tipo": "porcentaje",
+      "valor": 10,
+      "descuento_aplicado": 2.6
+    },
+    "subtotal": 25.98,
+    "costo_envio": 5.0,
+    "impuestos": 3.12,
+    "descuento": 2.6,
+    "total": 31.5,
+    "notas": "Dejar con el portero si no estoy",
+    "historial_estados": [
+      {
+        "estado": "pendiente",
+        "fecha": { "$date": "2023-06-20T10:30:00Z" },
+        "usuario_id": null,
+        "nota": "Pedido creado"
+      },
+      {
+        "estado": "procesando",
+        "fecha": { "$date": "2023-06-20T14:20:00Z" },
+        "usuario_id": { "$oid": "64a1b2c3d4e5f6789abcdef4" },
+        "nota": "Pago confirmado"
+      },
+      {
+        "estado": "enviado",
+        "fecha": { "$date": "2023-06-21T09:15:00Z" },
+        "usuario_id": { "$oid": "64a1b2c3d4e5f6789abcdef4" },
+        "nota": "Paquete enviado con DHL"
+      },
+      {
+        "estado": "entregado",
+        "fecha": { "$date": "2023-06-23T16:45:00Z" },
+        "usuario_id": null,
+        "nota": "Entregado al cliente"
+      }
+    ],
+    "fecha_pedido": { "$date": "2023-06-20T10:30:00Z" },
+    "fecha_actualizacion": { "$date": "2023-06-23T16:45:00Z" }
+  },
+  {
+    "_id": { "$oid": "64a1b2c3d4e5f6789abcdefC" },
+    "numero_pedido": "ORD-2023-002",
+    "usuario_id": { "$oid": "64a1b2c3d4e5f6789abcdef0" },
+    "usuario_info": {
+      "nombre": "Juan Pérez",
+      "email": "juan@ejemplo.com",
+      "telefono": "+123456789"
+    },
+    "estado": "procesando",
+    "productos": [
+      {
+        "producto_id": { "$oid": "64a1b2c3d4e5f6789abcdef2" },
+        "nombre": "Omega 3 Premium",
+        "sku": "OMG-3-001",
+        "precio_unitario": 24.99,
+        "cantidad": 1,
+        "subtotal": 24.99,
+        "imagen": "https://ejemplo.com/omega3-thumb.jpg"
+      },
+      {
+        "producto_id": { "$oid": "64a1b2c3d4e5f6789abcdefA" },
+        "nombre": "Magnesio Quelado",
+        "sku": "MAG-Q-001",
+        "precio_unitario": 18.99,
+        "cantidad": 1,
+        "subtotal": 18.99,
+        "imagen": "https://ejemplo.com/magnesio-thumb.jpg"
+      }
+    ],
+    "direccion_envio": {
+      "calle": "Calle Principal 123",
+      "ciudad": "Ciudad Ejemplo",
+      "estado": "Estado Ejemplo",
+      "codigo_postal": "12345",
+      "pais": "México"
+    },
+    "pago": {
+      "metodo": "transferencia",
+      "estado": "pendiente",
+      "referencia": "TRANS-789012",
+      "ultimos_digitos": null,
+      "proveedor": "Banco Nacional"
+    },
+    "envio": {
+      "metodo": "Express",
+      "costo": 10.0,
+      "seguimiento": {
+        "codigo": null,
+        "servicio": "FedEx",
+        "url": null
+      },
+      "fecha_estimada": { "$date": "2023-06-27T00:00:00Z" }
+    },
+    "promocion": null,
+    "subtotal": 43.98,
+    "costo_envio": 10.0,
+    "impuestos": 5.4,
+    "descuento": 0,
+    "total": 59.38,
+    "notas": "",
+    "historial_estados": [
+      {
+        "estado": "pendiente",
+        "fecha": { "$date": "2023-06-25T15:20:00Z" },
+        "usuario_id": null,
+        "nota": "Pedido creado"
+      },
+      {
+        "estado": "procesando",
+        "fecha": { "$date": "2023-06-25T16:10:00Z" },
+        "usuario_id": { "$oid": "64a1b2c3d4e5f6789abcdef4" },
+        "nota": "En espera de confirmación de pago"
+      }
+    ],
+    "fecha_pedido": { "$date": "2023-06-25T15:20:00Z" },
+    "fecha_actualizacion": { "$date": "2023-06-25T16:10:00Z" }
+  }
+]

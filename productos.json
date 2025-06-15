@@ -1,0 +1,180 @@
+[
+  {
+    "_id": { "$oid": "64a1b2c3d4e5f6789abcdef1" },
+    "nombre": "Vitamina C Natural",
+    "slug": "vitamina-c-natural",
+    "descripcion": "Suplemento natural de vitamina C extraído de frutas cítricas orgánicas. Fortalece el sistema inmunológico y ayuda en la absorción de hierro. Ideal para prevenir resfriados y mantener una piel saludable.",
+    "descripcion_corta": "Refuerza tu sistema inmunológico naturalmente",
+    "precio": 15.99,
+    "precio_descuento": 12.99,
+    "descuento_activo": true,
+    "imagenes": [
+      {
+        "url": "https://ejemplo.com/vitamina-c-principal.jpg",
+        "alt": "Frasco de Vitamina C Natural",
+        "es_principal": true
+      },
+      {
+        "url": "https://ejemplo.com/vitamina-c-ingredientes.jpg",
+        "alt": "Ingredientes de Vitamina C",
+        "es_principal": false
+      }
+    ],
+    "categoria": {
+      "_id": { "$oid": "64a1b2c3d4e5f6789abcdef5" },
+      "nombre": "Vitaminas y Minerales",
+      "slug": "vitaminas-minerales"
+    },
+    "subcategoria": {
+      "_id": { "$oid": "64a1b2c3d4e5f6789abcdef6" },
+      "nombre": "Vitaminas",
+      "slug": "vitaminas"
+    },
+    "etiquetas": ["vitaminas", "sistema inmune", "natural", "orgánico", "antioxidante"],
+    "especificaciones": {
+      "peso": "100g",
+      "contenido": "60 cápsulas",
+      "ingredientes": "Extracto de acerola, rosa mosqueta, bioflavonoides cítricos",
+      "instrucciones": "Tomar 1 cápsula diaria con alimentos",
+      "contraindicaciones": "No recomendado para personas con cálculos renales"
+    },
+    "stock": 50,
+    "sku": "VIT-C-001",
+    "destacado": true,
+    "estado": "activo",
+    "reseñas": [
+      {
+        "usuario_id": { "$oid": "64a1b2c3d4e5f6789abcdef0" },
+        "nombre_usuario": "Juan Pérez",
+        "calificacion": 5,
+        "titulo": "Excelente producto",
+        "comentario": "Me ha ayudado mucho con mi salud, ya no me enfermo tanto",
+        "fecha": { "$date": "2023-05-15T10:30:00Z" },
+        "verificado": true
+      },
+      {
+        "usuario_id": { "$oid": "64a1b2c3d4e5f6789abcdef7" },
+        "nombre_usuario": "Ana García",
+        "calificacion": 4,
+        "titulo": "Muy bueno",
+        "comentario": "Buen producto, lo recomiendo",
+        "fecha": { "$date": "2023-06-10T14:20:00Z" },
+        "verificado": true
+      }
+    ],
+    "estadisticas": {
+      "calificacion_promedio": 4.8,
+      "total_reseñas": 25,
+      "veces_comprado": 120,
+      "vistas": 1500
+    },
+    "fecha_creacion": { "$date": "2023-01-15T08:00:00Z" },
+    "fecha_actualizacion": { "$date": "2023-06-20T12:00:00Z" }
+  },
+  {
+    "_id": { "$oid": "64a1b2c3d4e5f6789abcdef2" },
+    "nombre": "Omega 3 Premium",
+    "slug": "omega-3-premium",
+    "descripcion": "Aceite de pescado de alta calidad rico en EPA y DHA. Apoya la salud cardiovascular, cerebral y articular. Extraído de peces de aguas profundas mediante proceso de destilación molecular.",
+    "descripcion_corta": "Salud cardiovascular y cerebral",
+    "precio": 29.99,
+    "precio_descuento": 24.99,
+    "descuento_activo": true,
+    "imagenes": [
+      {
+        "url": "https://ejemplo.com/omega3-principal.jpg",
+        "alt": "Frasco de Omega 3 Premium",
+        "es_principal": true
+      }
+    ],
+    "categoria": {
+      "_id": { "$oid": "64a1b2c3d4e5f6789abcdef8" },
+      "nombre": "Suplementos Deportivos",
+      "slug": "suplementos-deportivos"
+    },
+    "subcategoria": {
+      "_id": { "$oid": "64a1b2c3d4e5f6789abcdef9" },
+      "nombre": "Aceites Esenciales",
+      "slug": "aceites-esenciales"
+    },
+    "etiquetas": ["omega3", "corazón", "cerebro", "articulaciones", "premium"],
+    "especificaciones": {
+      "peso": "120g",
+      "contenido": "90 cápsulas blandas",
+      "ingredientes": "Aceite de pescado (EPA 180mg, DHA 120mg por cápsula)",
+      "instrucciones": "Tomar 2 cápsulas diarias con las comidas",
+      "contraindicaciones": "Consultar médico si toma anticoagulantes"
+    },
+    "stock": 30,
+    "sku": "OMG-3-001",
+    "destacado": true,
+    "estado": "activo",
+    "reseñas": [
+      {
+        "usuario_id": { "$oid": "64a1b2c3d4e5f6789abcdef4" },
+        "nombre_usuario": "María López",
+        "calificacion": 5,
+        "titulo": "Excelente calidad",
+        "comentario": "Se nota la diferencia en la concentración mental",
+        "fecha": { "$date": "2023-06-01T09:15:00Z" },
+        "verificado": true
+      }
+    ],
+    "estadisticas": {
+      "calificacion_promedio": 4.9,
+      "total_reseñas": 18,
+      "veces_comprado": 85,
+      "vistas": 1200
+    },
+    "fecha_creacion": { "$date": "2023-02-01T08:00:00Z" },
+    "fecha_actualizacion": { "$date": "2023-06-22T10:30:00Z" }
+  },
+  {
+    "_id": { "$oid": "64a1b2c3d4e5f6789abcdefA" },
+    "nombre": "Magnesio Quelado",
+    "slug": "magnesio-quelado",
+    "descripcion": "Magnesio en forma quelada para mejor absorción. Ayuda a reducir el cansancio y la fatiga, contribuye al funcionamiento normal del sistema nervioso y muscular.",
+    "descripcion_corta": "Reduce el cansancio y fortalece músculos",
+    "precio": 18.99,
+    "precio_descuento": null,
+    "descuento_activo": false,
+    "imagenes": [
+      {
+        "url": "https://ejemplo.com/magnesio-principal.jpg",
+        "alt": "Frasco de Magnesio Quelado",
+        "es_principal": true
+      }
+    ],
+    "categoria": {
+      "_id": { "$oid": "64a1b2c3d4e5f6789abcdef5" },
+      "nombre": "Vitaminas y Minerales",
+      "slug": "vitaminas-minerales"
+    },
+    "subcategoria": {
+      "_id": { "$oid": "64a1b2c3d4e5f6789abcdefB" },
+      "nombre": "Minerales",
+      "slug": "minerales"
+    },
+    "etiquetas": ["magnesio", "músculos", "nervios", "quelado", "absorción"],
+    "especificaciones": {
+      "peso": "90g",
+      "contenido": "120 comprimidos",
+      "ingredientes": "Bisglicinato de magnesio 200mg por comprimido",
+      "instrucciones": "Tomar 1-2 comprimidos al día con agua",
+      "contraindicaciones": "No exceder la dosis recomendada"
+    },
+    "stock": 75,
+    "sku": "MAG-Q-001",
+    "destacado": false,
+    "estado": "activo",
+    "reseñas": [],
+    "estadisticas": {
+      "calificacion_promedio": 0,
+      "total_reseñas": 0,
+      "veces_comprado": 12,
+      "vistas": 450
+    },
+    "fecha_creacion": { "$date": "2023-03-10T08:00:00Z" },
+    "fecha_actualizacion": { "$date": "2023-06-15T11:20:00Z" }
+  }
+]

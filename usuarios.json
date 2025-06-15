@@ -1,0 +1,96 @@
+[
+  {
+    "_id": { "$oid": "64a1b2c3d4e5f6789abcdef0" },
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "email": "juan@ejemplo.com",
+    "password": "$2b$10$N9qo8uLOickgx2ZMRZoMye.Uo04/OjRnQBYCLmQ5QQzeYxWLo/Aw6",
+    "telefono": "+123456789",
+    "rol": "cliente",
+    "direcciones": [
+      {
+        "tipo": "envio",
+        "calle": "Calle Principal 123",
+        "ciudad": "Ciudad Ejemplo",
+        "estado": "Estado Ejemplo",
+        "codigo_postal": "12345",
+        "pais": "México",
+        "predeterminada": true
+      },
+      {
+        "tipo": "facturacion",
+        "calle": "Av. Comercial 456",
+        "ciudad": "Ciudad Ejemplo",
+        "estado": "Estado Ejemplo",
+        "codigo_postal": "12346",
+        "pais": "México",
+        "predeterminada": false
+      }
+    ],
+    "carrito": {
+      "productos": [
+        {
+          "producto_id": { "$oid": "64a1b2c3d4e5f6789abcdef1" },
+          "nombre": "Vitamina C Natural",
+          "precio_unitario": 12.99,
+          "cantidad": 2,
+          "subtotal": 25.98,
+          "imagen": "https://ejemplo.com/vitamina-c-thumb.jpg"
+        },
+        {
+          "producto_id": { "$oid": "64a1b2c3d4e5f6789abcdef2" },
+          "nombre": "Omega 3 Premium",
+          "precio_unitario": 24.99,
+          "cantidad": 1,
+          "subtotal": 24.99,
+          "imagen": "https://ejemplo.com/omega3-thumb.jpg"
+        }
+      ],
+      "subtotal": 50.97,
+      "fecha_actualizacion": { "$date": "2023-06-25T14:30:00Z" }
+    },
+    "historial_compras": [
+      {
+        "pedido_id": { "$oid": "64a1b2c3d4e5f6789abcdef3" },
+        "numero_pedido": "ORD-2023-001",
+        "fecha": { "$date": "2023-06-20T10:30:00Z" },
+        "total": 34.1,
+        "estado": "entregado"
+      }
+    ],
+    "fecha_registro": { "$date": "2023-01-10T08:00:00Z" },
+    "ultima_sesion": { "$date": "2023-06-25T14:30:00Z" },
+    "activo": true,
+    "verificado": true
+  },
+  {
+    "_id": { "$oid": "64a1b2c3d4e5f6789abcdef4" },
+    "nombre": "María",
+    "apellido": "López",
+    "email": "maria@ejemplo.com",
+    "password": "$2b$10$N9qo8uLOickgx2ZMRZoMye.Uo04/OjRnQBYCLmQ5QQzeYxWLo/Aw6",
+    "telefono": "+987654321",
+    "rol": "admin",
+    "direcciones": [
+      {
+        "tipo": "envio",
+        "calle": "Av. Salud 789",
+        "ciudad": "Ciudad Admin",
+        "estado": "Estado Admin",
+        "codigo_postal": "54321",
+        "pais": "México",
+        "predeterminada": true
+      }
+    ],
+    "carrito": {
+      "productos": [],
+      "subtotal": 0,
+      "fecha_actualizacion": { "$date": "2023-06-25T09:00:00Z" }
+    },
+    "historial_compras": [],
+    "fecha_registro": { "$date": "2022-12-01T08:00:00Z" },
+    "ultima_sesion": { "$date": "2023-06-25T16:45:00Z" },
+    "activo": true,
+    "verificado": true
+  }
+]

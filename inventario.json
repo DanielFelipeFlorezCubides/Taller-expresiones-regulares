@@ -1,0 +1,147 @@
+[
+  {
+    "_id": { "$oid": "64a1b2c3d4e5f6789abcdefD" },
+    "producto_id": { "$oid": "64a1b2c3d4e5f6789abcdef1" },
+    "nombre_producto": "Vitamina C Natural",
+    "sku": "VIT-C-001",
+    "cantidad_actual": 50,
+    "cantidad_minima": 10,
+    "ubicacion": "Almacén principal - Estante A1",
+    "lotes": [
+      {
+        "codigo": "LOT-2023-001",
+        "cantidad": 30,
+        "fecha_fabricacion": { "$date": "2023-01-01T00:00:00Z" },
+        "fecha_caducidad": { "$date": "2025-01-01T00:00:00Z" },
+        "costo_unitario": 5.99
+      },
+      {
+        "codigo": "LOT-2023-002",
+        "cantidad": 20,
+        "fecha_fabricacion": { "$date": "2023-03-15T00:00:00Z" },
+        "fecha_caducidad": { "$date": "2025-03-15T00:00:00Z" },
+        "costo_unitario": 6.25
+      }
+    ],
+    "proveedor": {
+      "_id": { "$oid": "64a1b2c3d4e5f6789abcdefE" },
+      "nombre": "Laboratorios Naturales SA",
+      "contacto": "ventas@labnaturales.com",
+      "telefono": "+52-555-123-4567"
+    },
+    "movimientos": [
+      {
+        "tipo": "entrada",
+        "cantidad": 100,
+        "fecha": { "$date": "2023-01-15T08:00:00Z" },
+        "usuario_id": { "$oid": "64a1b2c3d4e5f6789abcdef4" },
+        "lote": "LOT-2023-001",
+        "nota": "Compra inicial de inventario"
+      },
+      {
+        "tipo": "salida",
+        "cantidad": 2,
+        "fecha": { "$date": "2023-06-20T10:30:00Z" },
+        "usuario_id": { "$oid": "64a1b2c3d4e5f6789abcdef4" },
+        "pedido_id": { "$oid": "64a1b2c3d4e5f6789abcdef3" },
+        "lote": "LOT-2023-001",
+        "nota": "Venta - Pedido ORD-2023-001"
+      },
+      {
+        "tipo": "entrada",
+        "cantidad": 50,
+        "fecha": { "$date": "2023-03-20T14:15:00Z" },
+        "usuario_id": { "$oid": "64a1b2c3d4e5f6789abcdef4" },
+        "lote": "LOT-2023-002",
+        "nota": "Reposición de stock"
+      }
+    ],
+    "fecha_actualizacion": { "$date": "2023-06-25T16:00:00Z" }
+  },
+  {
+    "_id": { "$oid": "64a1b2c3d4e5f6789abcdefF" },
+    "producto_id": { "$oid": "64a1b2c3d4e5f6789abcdef2" },
+    "nombre_producto": "Omega 3 Premium",
+    "sku": "OMG-3-001",
+    "cantidad_actual": 30,
+    "cantidad_minima": 5,
+    "ubicacion": "Almacén principal - Estante B2",
+    "lotes": [
+      {
+        "codigo": "LOT-OMG-001",
+        "cantidad": 30,
+        "fecha_fabricacion": { "$date": "2023-02-01T00:00:00Z" },
+        "fecha_caducidad": { "$date": "2025-02-01T00:00:00Z" },
+        "costo_unitario": 12.5
+      }
+    ],
+    "proveedor": {
+      "_id": { "$oid": "64a1b2c3d4e5f6789abcdef10" },
+      "nombre": "Omega Supplements Inc",
+      "contacto": "orders@omegasupplements.com",
+      "telefono": "+1-800-555-0199"
+    },
+    "movimientos": [
+      {
+        "tipo": "entrada",
+        "cantidad": 50,
+        "fecha": { "$date": "2023-02-10T09:30:00Z" },
+        "usuario_id": { "$oid": "64a1b2c3d4e5f6789abcdef4" },
+        "lote": "LOT-OMG-001",
+        "nota": "Compra inicial"
+      },
+      {
+        "tipo": "salida",
+        "cantidad": 20,
+        "fecha": { "$date": "2023-06-01T00:00:00Z" },
+        "usuario_id": { "$oid": "64a1b2c3d4e5f6789abcdef4" },
+        "lote": "LOT-OMG-001",
+        "nota": "Ventas del mes de mayo"
+      }
+    ],
+    "fecha_actualizacion": { "$date": "2023-06-25T12:00:00Z" }
+  },
+  {
+    "_id": { "$oid": "64a1b2c3d4e5f6789abcdef11" },
+    "producto_id": { "$oid": "64a1b2c3d4e5f6789abcdefA" },
+    "nombre_producto": "Magnesio Quelado",
+    "sku": "MAG-Q-001",
+    "cantidad_actual": 75,
+    "cantidad_minima": 15,
+    "ubicacion": "Almacén principal - Estante C1",
+    "lotes": [
+      {
+        "codigo": "LOT-MAG-001",
+        "cantidad": 75,
+        "fecha_fabricacion": { "$date": "2023-03-01T00:00:00Z" },
+        "fecha_caducidad": { "$date": "2026-03-01T00:00:00Z" },
+        "costo_unitario": 8.99
+      }
+    ],
+    "proveedor": {
+      "_id": { "$oid": "64a1b2c3d4e5f6789abcdefE" },
+      "nombre": "Laboratorios Naturales SA",
+      "contacto": "ventas@labnaturales.com",
+      "telefono": "+52-555-123-4567"
+    },
+    "movimientos": [
+      {
+        "tipo": "entrada",
+        "cantidad": 100,
+        "fecha": { "$date": "2023-03-15T10:00:00Z" },
+        "usuario_id": { "$oid": "64a1b2c3d4e5f6789abcdef4" },
+        "lote": "LOT-MAG-001",
+        "nota": "Nuevo producto en inventario"
+      },
+      {
+        "tipo": "salida",
+        "cantidad": 25,
+        "fecha": { "$date": "2023-06-01T00:00:00Z" },
+        "usuario_id": { "$oid": "64a1b2c3d4e5f6789abcdef4" },
+        "lote": "LOT-MAG-001",
+        "nota": "Ventas acumuladas"
+      }
+    ],
+    "fecha_actualizacion": { "$date": "2023-06-20T14:30:00Z" }
+  }
+]
