@@ -37,6 +37,8 @@ La base de datos está conformada por **3 colecciones principales**:
    mongoimport --db salud_y_vida --collection configuracion --file configuracion.json --jsonArray
    mongoimport --db salud_y_vida --collection inventario --file inventario.json --jsonArray
    mongoimport --db salud_y_vida --collection pedidos --file pedidos.json --jsonArray
+   mongoimport --db salud_y_vida --collection productos --file productos.json --jsonArray
+   mongoimport --db salud_y_vida --collection usuarios --file usuarios.json --jsonArray
    ```
 
 ---
@@ -46,6 +48,8 @@ La base de datos está conformada por **3 colecciones principales**:
 - `configuracion.json` → Colección: `configuracion`
 - `inventario.json` → Colección: `inventario`
 - `pedidos.json` → Colección: `pedidos`
+- `productos.json` → Colección: `productos`
+- `usuarios.json` → Colección: `usuarios`
 
 ---
 
@@ -213,6 +217,184 @@ db.pedidos.find({ "direccion_envio.codigo_postal": { $regex: "^123" } })
 ```
 > Segmentación geográfica para campañas.
 
+# Consultas con Expresiones Regulares - Colecciones productos y usuarios
+
+## Búsquedas y Autocompletado
+
+### Consulta 1: Autocompletar productos por nombre
+```js
+db.productos.find({ "nombre": { "$regex": "^Vita", "$options": "i" } })
+```
+**Caso de uso:** Barra de búsqueda con autocompletado para sugerir productos cuando el usuario escribe "vita", mostrando "Vitamina C", "Vitamina D", etc.
+
+### Consulta 2: Buscar productos naturales
+```js
+db.productos.find({ "nombre": { "$regex": "Natural", "$options": "i" } })
+```
+**Caso de uso:** Filtro en la página de categorías para mostrar solo productos 100% naturales.
+
+### Consulta 3: Productos para sistema inmune
+```js
+db.productos.find({ "descripcion": { "$regex": "sistema inmune", "$options": "i" } })
+```
+**Caso de uso:** Página especial de "Productos para Defensas" durante temporada de gripe.
+
+## Análisis de Usuarios
+
+### Consulta 4: Usuarios con Gmail
+```js
+db.usuarios.find({ "email": { "$regex": "@gmail\\.com$", "$options": "i" } })
+```
+**Caso de uso:** Estadísticas de marketing para personalizar campañas según proveedor de email.
+
+### Consulta 5: Usuarios mexicanos
+```js
+db.usuarios.find({ "telefono": { "$regex": "^\\+52", "$options": "i" } })
+```
+**Caso de uso:** Segmentación por país para promociones específicas y cálculo de envíos.
+
+### Consulta 6: Análisis de género por nombres
+```js
+db.usuarios.find({ "nombre": { "$regex": "a$", "$options": "i" } })
+```
+**Caso de uso:** Estadísticas demográficas para personalización de marketing.
+
+## Gestión de Inventario
+
+### Consulta 7: Productos de vitaminas por SKU
+```js
+db.productos.find({ "sku": { "$regex": "VIT", "$options": "i" } })
+```
+**Caso de uso:** Reportes de inventario específicos de vitaminas para descuentos masivos.
+
+### Consulta 8: Productos con extractos
+```js
+db.productos.find({ "especificaciones.ingredientes": { "$regex": "extracto", "$options": "i" } })
+```
+**Caso de uso:** Crear sección de "Productos con Extractos Herbales".
+
+### Consulta 9: Productos Omega
+```js
+db.productos.find({ "etiquetas": { "$regex": "omega", "$options": "i" } })
+```
+**Caso de uso:** Página de categoría específica de ácidos grasos esenciales.
+
+## Control de Calidad
+
+### Consulta 10: Validar códigos postales
+```js
+db.usuarios.find({ "direcciones.codigo_postal": { "$regex": "^\\d{5}$" } })
+```
+**Caso de uso:** Validar formatos de códigos postales colombianos y mexicanos para mejorar entregas.
+
+### Consulta 11: Productos con advertencias de embarazo
+```js
+db.productos.find({ "especificaciones.contraindicaciones": { "$regex": "embarazo", "$options": "i" } })
+```
+**Caso de uso:** Filtrar productos seguros para usuarias embarazadas.
+
+### Consulta 12: Verificar formato de slugs
+```js
+db.productos.find({ "slug": { "$regex": "-" } })
+```
+**Caso de uso:** Verificar que todos los slugs siguen formato SEO con guiones.
+
+## Análisis de Ventas
+
+### Consulta 13: Pedidos del año 2023
+```js
+db.pedidos.find({ "numero_pedido": { "$regex": "2023", "$options": "i" } })
+```
+**Caso de uso:** Reportes anuales y estadísticas de ventas por año.
+
+### Consulta 14: Productos con precios psicológicos
+```js
+db.productos.find({ "precio": { "$regex": "\\.99$" } })
+```
+**Caso de uso:** Análisis de estrategias de precios terminados en .99.
+
+### Consulta 15: Usuarios con productos premium en carrito
+```js
+db.usuarios.find({ "carrito.productos.nombre": { "$regex": "Premium", "$options": "i" } })
+```
+**Caso de uso:** Identificar usuarios interesados en gama alta para cross-selling.
+
+## Atención al Cliente
+
+### Consulta 16: Pedidos urgentes
+```js
+db.pedidos.find({ "notas": { "$regex": "urgente", "$options": "i" } })
+```
+**Caso de uso:** Priorizar pedidos marcados como urgentes en el proceso de envío.
+
+### Consulta 17: Reseñas positivas
+```js
+db.productos.find({ "reseñas.comentario": { "$regex": "recomiendo", "$options": "i" } })
+```
+**Caso de uso:** Identificar reseñas positivas para testimonios destacados.
+
+### Consulta 18: Direcciones en avenidas principales
+```js
+db.usuarios.find({ "direcciones.calle": { "$regex": "(Av\\.|Avenida)", "$options": "i" } })
+```
+**Caso de uso:** Optimizar rutas de reparto en zonas urbanas principales.
+
+## Mantenimiento de Datos
+
+### Consulta 19: Usuarios registrados por mes
+```js
+db.usuarios.find({ "fecha_registro": { "$regex": "2023-01" } })
+```
+**Caso de uso:** Análisis de crecimiento mensual y campañas de retención.
+
+### Consulta 20: Productos inactivos
+```js
+db.productos.find({ "estado": { "$regex": "^(?!activo$).*", "$options": "i" } })
+```
+**Caso de uso:** Encontrar productos que necesitan revisión o reactivación.
+
+### Consulta 21: Emails con números
+```js
+db.usuarios.find({ "email": { "$regex": "\\d", "$options": "i" } })
+```
+**Caso de uso:** Detectar patrones de registro sospechosos o cuentas automatizadas.
+
+### Consulta 22: Productos con nombres simples
+```js
+db.productos.find({ "nombre": { "$regex": "^\\w+$" } })
+```
+**Caso de uso:** Identificar productos que necesitan descripciones más detalladas.
+
+### Consulta 23: Direcciones con formato Bis
+```js
+db.usuarios.find({ "direcciones.calle": { "$regex": "(B\\.|Bis)", "$options": "i" } })
+```
+**Caso de uso:** Estandarizar formatos de direcciones para mejor precisión.
+
+### Consulta 24: Usuarios con apellidos específicos
+```js
+db.usuarios.find({ "apellido": { "$regex": "^L", "$options": "i" } })
+```
+**Caso de uso:** Campañas de marketing personalizadas por inicial del apellido.
+
+### Consulta 25: Validación de productos activos
+```js
+db.productos.find({ 
+  "estado": "activo",
+  "nombre": { "$not": { "$regex": "^\\s*$" } }
+})
+```
+**Caso de uso:** Verificar que todos los productos activos tienen nombres válidos.
+
+## Notas de Implementación
+
+- Usar `$options: "i"` para búsquedas insensibles a mayúsculas/minúsculas
+- Escapar caracteres especiales con `\\` en las expresiones regulares
+- Combinar regex con otros filtros para consultas más específicas
+- Considerar índices de texto para búsquedas más complejas
+- Usar `limit()` en autocompletado para mejorar performance
+
+
 ---
 
 ## ✅ Estado del Proyecto
@@ -224,6 +406,6 @@ db.pedidos.find({ "direccion_envio.codigo_postal": { $regex: "^123" } })
 
 ---
 
-## 📅 Fecha de Entrega
-
-**15 de Junio de 2025, 11:59 p.m.**
+## ✍️ Autores
+- Daniel Felipe Florez Cubides
+- Mateo Paternina Mercado

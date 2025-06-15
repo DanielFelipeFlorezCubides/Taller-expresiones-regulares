@@ -5,8 +5,8 @@
     "slug": "vitamina-c-natural",
     "descripcion": "Suplemento natural de vitamina C extraído de frutas cítricas orgánicas. Fortalece el sistema inmunológico y ayuda en la absorción de hierro. Ideal para prevenir resfriados y mantener una piel saludable.",
     "descripcion_corta": "Refuerza tu sistema inmunológico naturalmente",
-    "precio": 15.99,
-    "precio_descuento": 12.99,
+    "precio": 15999.99,
+    "precio_descuento": 1299.99,
     "descuento_activo": true,
     "imagenes": [
       {
@@ -71,14 +71,15 @@
     "fecha_creacion": { "$date": "2023-01-15T08:00:00Z" },
     "fecha_actualizacion": { "$date": "2023-06-20T12:00:00Z" }
   },
+
   {
     "_id": { "$oid": "64a1b2c3d4e5f6789abcdef2" },
     "nombre": "Omega 3 Premium",
     "slug": "omega-3-premium",
     "descripcion": "Aceite de pescado de alta calidad rico en EPA y DHA. Apoya la salud cardiovascular, cerebral y articular. Extraído de peces de aguas profundas mediante proceso de destilación molecular.",
     "descripcion_corta": "Salud cardiovascular y cerebral",
-    "precio": 29.99,
-    "precio_descuento": 24.99,
+    "precio": 29999.99,
+    "precio_descuento": 2499.99,
     "descuento_activo": true,
     "imagenes": [
       {
@@ -129,13 +130,14 @@
     "fecha_creacion": { "$date": "2023-02-01T08:00:00Z" },
     "fecha_actualizacion": { "$date": "2023-06-22T10:30:00Z" }
   },
+
   {
     "_id": { "$oid": "64a1b2c3d4e5f6789abcdefA" },
     "nombre": "Magnesio Quelado",
     "slug": "magnesio-quelado",
     "descripcion": "Magnesio en forma quelada para mejor absorción. Ayuda a reducir el cansancio y la fatiga, contribuye al funcionamiento normal del sistema nervioso y muscular.",
     "descripcion_corta": "Reduce el cansancio y fortalece músculos",
-    "precio": 18.99,
+    "precio": 18999.99,
     "precio_descuento": null,
     "descuento_activo": false,
     "imagenes": [
@@ -177,4 +179,5 @@
     "fecha_creacion": { "$date": "2023-03-10T08:00:00Z" },
     "fecha_actualizacion": { "$date": "2023-06-15T11:20:00Z" }
   }
+
 ]
